@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function generarArray(){
+            //declaramos el array
+            var valores = new Array(50);
+            //asignamos los valores aleatorios
+            for (var i=0; i<50; i++){
+                valores [i] = Math.floor((Math.random()*100)+1);
+            }
+            return valores;
+         }
+
+        function parImpar(array){
+            //guardamos los valores según sean pares o impares
+            var par = new Array();
+            var impar = new Array();
+            var esPar;
+            var contadorPar = 0
+            var contadorImpar = 0;
+
+            for(var i=0; i<array.length; i++){
+            
+                esPar = array[i]%2;
+                if(esPar == 0 ){
+                    par[contadorPar] = array[i];
+                    contadorPar++;
+                }else{
+                    impar[contadorImpar] = array[i];
+                    contadorImpar++;
+                }
+            }
+            alert(par);
+            alert(impar);
+        }
+        miArray = generarArray();
+        alert(miArray);
+        parImpar(miArray);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
